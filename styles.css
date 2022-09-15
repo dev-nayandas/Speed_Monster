@@ -15,7 +15,13 @@ body {
   width: 70%;
   margin: 0 auto;
 }
-
+#blog{
+  
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+}
 #question {
   height: 100px;
   display: flex;
