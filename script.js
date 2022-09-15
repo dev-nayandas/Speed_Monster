@@ -35,7 +35,7 @@ const typeController = (e) => {
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
-    return;
+    return errorCount++;
   }
 
   userText += newLetter;
@@ -44,6 +44,7 @@ const typeController = (e) => {
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
+    
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
@@ -52,6 +53,7 @@ const typeController = (e) => {
   if (questionText === userText) {
     gameOver();
   }
+  
 };
 
 const validate = (key) => {
